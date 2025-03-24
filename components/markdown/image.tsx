@@ -10,7 +10,10 @@ export default function Image({
   width = 800,
   height = 350,
   ...props
-}: ComponentProps<"img">) {
+}: ComponentProps<"img"> & {
+  width?: Width;
+  height?: Height;
+}) {
   if (!src) return null;
   return (
     <NextImage
